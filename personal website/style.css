@@ -110,17 +110,8 @@ section {
   display: inline-block;
   transition: var(--transition1);
 }
-.main .social-media a:first-child:hover {
-  color: #0072b1;
-}
-.main .social-media a:nth-child(2):hover {
-  color: #00acee;
-}
-.main .social-media a:nth-child(3):hover {
-  color: #171515;
-}
-.main .social-media a:nth-child(4):hover {
-  color: #212121;
+.main .social-media a:hover {
+  color: gold;
 }
 /* Main Section End */
 
@@ -208,6 +199,29 @@ section {
   display: flex;
   justify-content: center;
 }
+.up {
+  position: fixed;
+  bottom: 25px;
+  right: -40px;
+  background-color: var(--baby-blue);
+  color: white;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  /* border-radius: 50%; */
+  font-size: 40px;
+  cursor: pointer;
+  transition: 0.6s ease;
+}
+.up i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+}
+.up.show {
+  right: 25px;
+}
 /* Projects Section End */
 
 /* Contact Section Start */
@@ -263,16 +277,13 @@ form textarea {
   background-color: #000016;
   padding: 2em;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 .footer-title {
   font-size: 1.2em;
 }
 .footer-title #name {
   color: var(--baby-blue);
-}
-.footer .social-media a {
-  font-size: 1.2em;
 }
 /* Footer Section End */
 
