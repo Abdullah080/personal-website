@@ -9,3 +9,9 @@
 section {
   padding: 100px 200px;
 }
+.bg-yellow {
+  background-color: yellow;
+}
+.bg-red {
+  background-color: red;
+}

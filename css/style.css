@@ -14,6 +14,11 @@
   --blue: #0000ff;
   --navy-blue: #000c66;
   --dark-blue: #050a30;
+  --blue-green: #00c4b0;
+  --github-color: #171515;
+  --codepen-color: #212121;
+  --twitter-color: #00acee;
+  --linkedin-color: #0073a4;
   --border-radius: 10px;
   --transition1: 0.2s ease;
   --transition2: 0.4s ease;
@@ -44,7 +49,7 @@
 }
 .header__nav-links {
   color: var(--navy-blue);
-  width: 70px;
+  width: 80px;
   height: 100%;
   font-size: 1.1em;
   font-weight: 500;
@@ -212,144 +217,106 @@
 /* Projects Section End */
 
 /* Start Skills Section */
-/* .skills {
-  padding: var(--section-padding) 0;
-} */
-.skills .container {
+.skills__content {
+  width: 100%;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  flex-direction: row;
 }
-.skills .container > div > h3 {
+.skills__box {
+  width: 45%;
+}
+.skills__box:nth-of-type(2) {
+  margin-left: 10%;
+}
+.skills__title {
   margin-bottom: 30px;
   font-weight: normal;
   text-align: center;
   text-transform: uppercase;
 }
-.skills .container > div > p {
-  color: #777;
-  line-height: 2;
-  text-align: center;
-  margin-bottom: 60px;
-}
-.skills .content {
-  display: flex;
-  margin-bottom: 30px;
-}
-.skills .content img {
-  width: 100px;
-  border-radius: 50%;
-  margin-right: 50px;
-}
-.skills .text {
-  line-height: 1.8;
-  border-bottom: 1px solid #ccc;
-}
-.skills .text p {
-  color: #777;
-  text-align: right;
-}
-.skills .bullets {
-  display: flex;
-  justify-content: center;
-  margin: 50px 0;
-}
-.skills .bullets li {
-  width: 14px;
-  height: 14px;
-  border: 1px solid #aaa;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-.skills .bullets li.active {
-  background-color: var(--main-color);
-  border: var(--main-color);
-}
-.skills .our-skills .prog-holder {
+.skills__prog-holder {
   margin-bottom: 40px;
 }
-.skills .our-skills .prog-holder h4 {
+.skills__skill-title {
   margin-bottom: 15px;
   font-weight: normal;
   text-transform: uppercase;
 }
-.skills .our-skills .prog-holder .prog {
+.skills__prog-bar {
   background-color: #dedafc;
   height: 30px;
 }
-.skills .our-skills .prog-holder .prog span {
-  display: block;
-  background-color: var(--main-color);
+.skills__prog-bar__span {
   height: 100%;
+  display: block;
   position: relative;
 }
-.skills .our-skills .prog-holder .prog span::before {
+.skills__prog-bar__span::before {
   content: attr(data-progress);
-  position: absolute;
-  background-color: black;
   color: white;
+  background-color: black;
+  width: 40px;
+  padding: 4px 0;
+  border-radius: 4px;
+  position: absolute;
   top: -40px;
   right: -20px;
-  padding: 4px 0;
-  width: 40px;
   text-align: center;
-  border-radius: 4px;
 }
-.skills .our-skills .prog-holder .prog span::after {
+.skills__prog-bar__span::after {
   content: "";
-  position: absolute;
-  border-style: solid;
   border-width: 8px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+  position: absolute;
   right: -8px;
   top: -15px;
-  border-color: black transparent transparent transparent;
 }
 /* End Skills Section */
 
 /* Contact Section Start */
-form {
-  width: 55%;
+.contact {
+  /* background-color: var(--dark-blue); */
+  height: calc(100vh - 87.2px - 50px);
+}
+.contact__email {
+  font-size: 35px;
+  text-align: center;
+  font-weight: 800;
+  margin-bottom: 30px;
+  /* color: var(--baby-blue); */
+}
+.contact__email-link {
+  text-decoration: none;
+  color: black;
+}
+.contact__email-address {
+  color: var(--blue-green);
+}
+.contact__social-media {
+  text-align: center;
+}
+.contact__social-media-link {
+  margin-top: 20px;
   padding: 20px;
-  border-radius: 25px;
-  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+  color: black;
+  display: inline-block;
+  transition: var(--transition2);
 }
-input,
-textarea {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  border-bottom: 2px solid black;
-  outline: none;
-  margin: 10px auto;
-  font-size: 20px;
-}
-form button {
+.contact__social-media-link:hover {
   color: white;
-  background: var(--baby-blue);
-  width: 40%;
-  height: 40px;
-  font-size: 1.1em;
-  font-weight: 700;
-  letter-spacing: 1px;
-  border: none;
-  box-shadow: inset 0 0 0 0 var(--navy-blue);
-  z-index: 1;
-  cursor: pointer;
-  transition: ease-out 0.4s;
 }
-form button:hover {
-  box-shadow: inset 400px 0 0 0 var(--navy-blue);
+.contact__social-media-link:first-of-type:hover {
+  background-color: var(--github-color);
 }
-form textarea {
-  resize: none;
+.contact__social-media-link:nth-of-type(2):hover {
+  background-color: var(--codepen-color);
 }
-.row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.contact__social-media-link:nth-of-type(3):hover {
+  background-color: var(--twitter-color);
 }
-.row .input-group {
-  flex-basis: 48%;
+.contact__social-media-link:last-of-type:hover {
+  background-color: var(--linkedin-color);
 }
 /* Contact Section Start */
 

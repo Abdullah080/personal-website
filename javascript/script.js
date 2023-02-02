@@ -15,7 +15,7 @@ document.getElementById("currentYear").innerHTML = currentYear;
 let scrollUp = document.querySelector(".up");
 
 window.onscroll = function () {
-  console.log(this.scrollY);
+  // console.log(this.scrollY);
   if (this.scrollY >= 1250) {
     scrollUp.classList.add("show");
   } else {
